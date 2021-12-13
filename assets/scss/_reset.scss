@@ -1,0 +1,37 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-weight: $font-regular;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: $text;
+  outline-offset: 5px;
+}
+
+body, #__nuxt, #__layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+small {
+  font-size: 13px;
+}
+
+ol, ul {
+  list-style: none;
+}
