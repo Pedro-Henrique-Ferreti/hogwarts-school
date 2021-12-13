@@ -12,13 +12,22 @@ $gray-2: #232323;
 $text: $gray-1;
 $text-darker: $gray-2;
 
+// Font
 $font-light: 300;
 $font-regular: 400;
-$font-semibold: 500;
-$font-bold: 600;
+$font-medium: 500;
+$font-semibold: 600;
+
+$font-family-arbutus-slab: 'Arbutus Slab', serif;
 
 // Viewport sizes
 $tablet-portrait-up: 600px;
 $large-tablet-portrait-up: 768px;
 $tablet-landscape-up: 900px;
 $desktop-up: 1200px;
+
+// Spacing
+$mobile-padding: 16px;
+
+// Header
+$header-height: 64px;
