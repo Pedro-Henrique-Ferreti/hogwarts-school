@@ -20,11 +20,11 @@
           <li class="header__item">
             <a href="#houses" class="header__link">Houses</a>
           </li>
-          <div class="header__item">
+          <li class="header__item header__item--spacing">
             <a href="#" class="header__link">
               <IconMagicWand />
             </a>
-          </div>
+          </li>
         </ul>
       </div>
       <button class="header__menu-button" @click="menuIsOpen = !menuIsOpen">
@@ -64,9 +64,6 @@ export default {
   left: 0;
   right: 0;
   z-index: 10;
-  @media (min-width: $large-tablet-portrait-up) {
-    height: $header-height__tablet;
-  }
   @media (min-width: $desktop-up) {
     height: $header-height__desktop;
   }
@@ -78,6 +75,9 @@ export default {
     height: 100%;
     padding-right: $mobile-padding;
     position: relative;
+    @media (min-width: $desktop-up) {
+      padding-right: 90px;
+    }
   }
   &__logo-wrapper {
     display: flex;
@@ -89,7 +89,7 @@ export default {
       padding-left: 136px;
     }
     @media (min-width: $desktop-up) {
-      padding-left: 284px;
+      padding-left: 253px;
     }
   }
   &__logo-text {
@@ -118,9 +118,9 @@ export default {
     left: 0;
     z-index: 9;
     @media (min-width: $desktop-up) {
-      width: 260px;
-      height: 125px;
-      font-size: 32px;
+      width: 229px;
+      height: 110px;
+      font-size: 26px;
     }
   }
   &__menu {
@@ -158,6 +158,11 @@ export default {
   }
   &__item {
     display: flex;
+    &--spacing {
+      @media (min-width: $large-tablet-portrait-up) {
+        margin-left: 24px;
+      }
+    }
   }
   &__link {
     font-size: 18px;
