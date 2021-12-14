@@ -4,7 +4,8 @@
       <div class="header__logo-wrapper">
         <a href="#home" class="header__logo">Hogwarts</a>
         <span class="header__logo-text">
-          School of Witchcraft <br />
+          School of <br class="header__logo-text-br--desktop" /> 
+          Witchcraft <br />
           and Wizardry
         </span>
       </div>
@@ -19,6 +20,11 @@
           <li class="header__item">
             <a href="#houses" class="header__link">Houses</a>
           </li>
+          <div class="header__item">
+            <a href="#" class="header__link">
+              <IconMagicWand />
+            </a>
+          </div>
         </ul>
       </div>
       <button class="header__menu-button" @click="menuIsOpen = !menuIsOpen">
@@ -31,12 +37,14 @@
 <script>
 import IconMenu from '@/assets/images/icons/Menu.vue';
 import IconClose from '@/assets/images/icons/Close.vue';
+import IconMagicWand from '@/assets/images/icons/MagicWand.vue';
 
 export default {
   name: 'TheHeader',
   components: {
     IconMenu,
     IconClose,
+    IconMagicWand,
   },
   data() {
     return {
@@ -49,13 +57,19 @@ export default {
 <style lang="scss" scoped>
 .header {
   width: 100%;
-  height: $header-height;
+  height: $header-height__mobile;
   background-color: $white;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
+  @media (min-width: $large-tablet-portrait-up) {
+    height: $header-height__tablet;
+  }
+  @media (min-width: $desktop-up) {
+    height: $header-height__desktop;
+  }
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -70,15 +84,23 @@ export default {
     align-items: center;
     height: 100%;
     position: relative;
-    padding-left: 136px;
-    @media (max-width: $large-smartphone-up) {
-      padding-left: 128px; 
+    padding-left: 128px; 
+    @media (min-width: $large-smartphone-up) {
+      padding-left: 136px;
+    }
+    @media (min-width: $desktop-up) {
+      padding-left: 284px;
     }
   }
   &__logo-text {
     line-height: 18px;
     @media (max-width: $large-smartphone-up) {
       font-size: 14px; 
+    }
+  }
+  &__logo-text-br--desktop {
+    @media (max-width: $desktop-up) {
+      display: none;
     }
   }
   &__logo {
@@ -95,6 +117,11 @@ export default {
     top: 0;
     left: 0;
     z-index: 9;
+    @media (min-width: $desktop-up) {
+      width: 260px;
+      height: 125px;
+      font-size: 32px;
+    }
   }
   &__menu {
     width: 100%;
@@ -108,7 +135,14 @@ export default {
     z-index: 8;
     transition: top .4s ease-in-out;
     &--open {
-      top: $header-height;
+      top: $header-height__mobile;
+    }
+    @media (min-width: $large-tablet-portrait-up) {
+      display: flex;
+      width: initial;
+      position: initial;
+      padding: 0;
+      box-shadow: none;
     }
   }
   &__list {
@@ -117,6 +151,10 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    @media (min-width: $large-tablet-portrait-up) {
+      flex-direction: row;
+      gap: 40px;
+    }
   }
   &__item {
     display: flex;
@@ -125,6 +163,10 @@ export default {
     font-size: 18px;
     font-weight: $font-medium;
     text-transform: uppercase;
+    ::v-deep svg {
+      width: 32px;
+      height: 32px;
+    }
     &--active {
       position: relative;
       color: $red-1;
@@ -149,6 +191,9 @@ export default {
     background-color: transparent;
     ::v-deep svg {
       height: 20px;  
+    }
+    @media (min-width: $large-tablet-portrait-up) {
+      display: none;
     }
   }
 }

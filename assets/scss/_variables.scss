@@ -20,15 +20,18 @@ $font-semibold: 600;
 
 $font-family-arbutus-slab: 'Arbutus Slab', serif;
 
-// Viewport sizes
+// Viewport breakpoints
 $large-smartphone-up: 375px;
 $tablet-portrait-up: 600px;
 $large-tablet-portrait-up: 768px;
 $tablet-landscape-up: 900px;
+$large-tablet-landscape-up: 992px;
 $desktop-up: 1200px;
 
 // Spacing
 $mobile-padding: 16px;
 
 // Header
-$header-height: 64px;
+$header-height__mobile: 64px;
+$header-height__tablet: 76px;
+$header-height__desktop: 90px;
