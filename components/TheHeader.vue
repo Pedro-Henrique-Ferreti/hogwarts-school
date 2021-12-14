@@ -21,16 +21,23 @@
           </li>
         </ul>
       </div>
-      <button class="header__toggle-menu" @click="menuIsOpen = !menuIsOpen">
-        open/close menu
+      <button class="header__menu-button" @click="menuIsOpen = !menuIsOpen">
+        <component :is="menuIsOpen ? 'IconClose' : 'IconMenu'" />
       </button>
     </nav>
   </header>
 </template>
 
 <script>
+import IconMenu from '@/assets/images/icons/Menu.vue';
+import IconClose from '@/assets/images/icons/Close.vue';
+
 export default {
   name: 'TheHeader',
+  components: {
+    IconMenu,
+    IconClose,
+  },
   data() {
     return {
       menuIsOpen: false,
@@ -55,6 +62,7 @@ export default {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding-right: $mobile-padding;
     position: relative;
   }
   &__logo-wrapper {
@@ -63,6 +71,15 @@ export default {
     height: 100%;
     position: relative;
     padding-left: 136px;
+    @media (max-width: $large-smartphone-up) {
+      padding-left: 128px; 
+    }
+  }
+  &__logo-text {
+    line-height: 18px;
+    @media (max-width: $large-smartphone-up) {
+      font-size: 14px; 
+    }
   }
   &__logo {
     display: flex;
@@ -121,6 +138,17 @@ export default {
         bottom: 0;
         left: -20px;
       }
+    }
+  }
+  &__menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    ::v-deep svg {
+      height: 20px;  
     }
   }
 }
