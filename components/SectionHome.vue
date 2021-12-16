@@ -5,6 +5,7 @@
       <CardQuidditch />
       <CardHogsmeade />
     </div>
+    <HouseStudents />
   </section>
 </template>
 
@@ -12,6 +13,7 @@
 import Banner from '@/components/SectionHomeBanner.vue';
 import CardQuidditch from '@/components/SectionHomeCardQuidditch.vue';
 import CardHogsmeade from '@/components/SectionHomeCardHogsmeade.vue';
+import HouseStudents from '@/components/SectionHomeHouseStudents.vue';
 
 export default {
   name: 'SectionHome',
@@ -19,6 +21,7 @@ export default {
     Banner,
     CardQuidditch,
     CardHogsmeade,
+    HouseStudents,
   },
 };
 </script>
