@@ -2,20 +2,20 @@
   <div id="app">
     <TheHeader />
     <main class="main">
-      <HomeSection />
+      <SectionHome />
     </main>
   </div>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader.vue';
-import HomeSection from '@/components/HomeSection.vue';
+import SectionHome from '@/components/SectionHome.vue';
 
 export default {
   name: 'IndexPage',
   components: {
     TheHeader,
-    HomeSection,
+    SectionHome,
   },
 };
 </script>

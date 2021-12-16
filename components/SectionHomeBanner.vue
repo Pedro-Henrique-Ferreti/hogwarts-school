@@ -17,7 +17,7 @@ import IconGraduation from '@/assets/images/icons/Graduation.vue';
 import CallToAction from '@/components/CallToAction.vue';
 
 export default {
-  name: 'HomeSectionBanner',
+  name: 'SectionHomeBanner',
   components: {
     IconGraduation,
     CallToAction,

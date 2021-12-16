@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import Banner from '@/components/HomeSectionBanner.vue';
+import Banner from '@/components/SectionHomeBanner.vue';
 
 export default {
-  name: 'HomeSection',
+  name: 'SectionHome',
   components: {
     Banner,
   },
