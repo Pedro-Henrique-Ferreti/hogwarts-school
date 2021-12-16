@@ -1,16 +1,24 @@
 <template>
   <section class="app-section home" id="home">
     <Banner />
+    <div class="home__card-wrapper">
+      <CardQuidditch />
+      <CardHogsmeade />
+    </div>
   </section>
 </template>
 
 <script>
 import Banner from '@/components/SectionHomeBanner.vue';
+import CardQuidditch from '@/components/SectionHomeCardQuidditch.vue';
+import CardHogsmeade from '@/components/SectionHomeCardHogsmeade.vue';
 
 export default {
   name: 'SectionHome',
   components: {
     Banner,
+    CardQuidditch,
+    CardHogsmeade,
   },
 };
 </script>
@@ -23,5 +31,12 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  &__card-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 60px;
+  }
 }
 </style>

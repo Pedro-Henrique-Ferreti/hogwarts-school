@@ -8,7 +8,7 @@
       Read for your exams? <br />
       Take advantage of Tutor Service and preparation courses.
     </p>
-    <CallToAction>See Courses</CallToAction>
+    <CallToAction class="banner__button">See Courses</CallToAction>
   </div>  
 </template>
 
@@ -50,6 +50,11 @@ export default {
     font-size: 26px;
     color: $red-1;
     margin-bottom: 8px;
+  }
+  &__button {
+    position: absolute;
+    bottom: -28px;
+    left: calc(50% - (174px / 2));
   }
 }
 </style>
