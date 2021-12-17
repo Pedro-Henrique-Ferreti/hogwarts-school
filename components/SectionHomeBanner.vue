@@ -27,9 +27,18 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  padding: 44px $mobile-padding 52px $mobile-padding;
+  width: 100%;
+  max-width: 675px;
+  padding: 36px $mobile-padding 52px $mobile-padding;
   background-color: $white;
   position: relative;
+  @media (min-width: $large-tablet-portrait-up) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 0 $desktop-padding;
+  }
   &__icon {
     display: flex;
     justify-content: center;
@@ -39,7 +48,6 @@ export default {
     background-color: $red-1;
     position: absolute;
     top: -28px;
-    left: $mobile-padding;
     ::v-deep svg {
       fill: $white;
       width: 32px;
@@ -50,11 +58,20 @@ export default {
     font-size: 26px;
     color: $red-1;
     margin-bottom: 8px;
+    @media (min-width: $large-tablet-portrait-up) {
+      font-size: 40px;
+      margin-bottom: 0;
+    }
   }
   &__button {
     position: absolute;
     bottom: -28px;
     left: calc(50% - (174px / 2));
+    @media (min-width: $large-tablet-portrait-up) {
+      bottom: unset;
+      left: unset;
+      right: -40px;
+    }
   }
 }
 </style>

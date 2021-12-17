@@ -34,12 +34,26 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media (min-width: $large-tablet-landscape-up) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 750px;
+    padding: 0;
+    position: relative;
+  }
   &__card-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
     gap: 16px;
     margin-top: 60px;
+    @media (min-width: $large-tablet-landscape-up) {
+      gap: unset;
+      margin-top: 0;
+      justify-content: unset;
+    }
   }
 }
 </style>

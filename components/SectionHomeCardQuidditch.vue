@@ -25,6 +25,10 @@ export default {
   width: 150px;
   height: 150px;
   background-color: #{$gray-2}BF;
+  @media (min-width: $large-tablet-portrait-up) {
+    width: 200px;
+    height: 200px;
+  }
   &__icon {
     fill: $white;
     height: 45px;

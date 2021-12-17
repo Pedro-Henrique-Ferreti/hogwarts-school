@@ -19,17 +19,28 @@ export default {
   padding: 16px;
   background-color: #{$blue-2}BF;
   position: relative;
+  @media (min-width: $large-tablet-portrait-up) {
+    width: 200px;
+    height: 200px;
+    padding: 32px;
+  }
   &__title {
     color: $white;
     text-transform: uppercase;
     font-weight: $font-semibold;
     line-height: 18px;
+    @media (min-width: $large-tablet-portrait-up) {
+      font-size: 18px;
+    }
   }
   &__text {
     font-size: 14px;
     margin-top: 8px;
     color: $white;
     line-height: 18px;
+    @media (min-width: $large-tablet-portrait-up) {
+      margin-top: 16px;
+    }
   }
   &__button {
     display: flex;
@@ -45,6 +56,9 @@ export default {
     position: absolute;
     bottom: 0;
     right: 0;
+    @media (min-width: $large-tablet-portrait-up) {
+      height: 44px;
+    }
   }
 }
 </style>

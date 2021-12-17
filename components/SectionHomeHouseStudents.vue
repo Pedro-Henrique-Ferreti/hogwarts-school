@@ -36,6 +36,17 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-top: 32px;
+  @media (min-width: $large-tablet-landscape-up) {
+    flex-wrap: unset;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    width: 280px;
+    max-width: unset;
+    margin: unset;
+    position: absolute;
+    right: 0;
+  }
   &__card {
     display: flex;
     flex-direction: column;
@@ -43,17 +54,37 @@ export default {
     align-items: center;
     width: 124px;
     height: 90px;
+    @media (min-width: $large-tablet-landscape-up) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      height: unset;
+      padding: 16px 24px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      &--red {
+        width: 100%;
+      }
+      &--blue {
+        width: 90%;
+      }
+      &--yellow {
+        width: 80%;
+      }
+      &--green {
+        width: 70%;
+      }
+    }
     &--red {
       background-color: $red-1;
     }
     &--blue {
       background-color: $blue-1;
     }
-    &--green {
-      background-color: $green-1;
-    }
     &--yellow {
       background-color: $golden-1;
+    }
+    &--green {
+      background-color: $green-1;
     }
   }
   &__quantity {
