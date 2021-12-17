@@ -7,3 +7,15 @@
     height: $card-height__extra-large;
   }
 }
+
+@mixin scale-card-background-image {
+  overflow: hidden;
+  [class*="__background-image"] {
+    transition: transform .3s ease-in-out;
+  }
+  &:hover {
+    [class*="__background-image"] {
+      transform: scale(1.1);
+    }
+  }
+}

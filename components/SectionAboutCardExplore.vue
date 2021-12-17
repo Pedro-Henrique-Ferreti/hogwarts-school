@@ -1,15 +1,17 @@
 <template>
   <div class="card-explore">
-    <div class="card-explore__image" />
+    <div class="card-explore__background-wrapper">
+      <div class="card-explore__background-image" />
+    </div>
     <nav class="card-explore__nav">
       <ul class="card-explore__list">
         <li class="card-explore__item">
           <a class="card-explore__link" href="#">Classrooms</a>
         </li>
-        <li class="card-explore__item card-explore__item--active">
+        <li class="card-explore__item">
           <a class="card-explore__link" href="#">Magic</a>
         </li>
-        <li class="card-explore__item">
+        <li class="card-explore__item card-explore__item--active">
           <a class="card-explore__link" href="#">Library</a>
         </li>
         <li class="card-explore__item">
@@ -36,9 +38,15 @@ export default {
 <style lang="scss" scoped>
 .card-explore {
   @include card-height;
+  @include scale-card-background-image;
   width: 100%;
   position: relative;
-  &__image {
+  overflow: unset;
+  &__background-wrapper {
+    overflow: hidden;
+    height: inherit;
+  }
+  &__background-image {
     width: 75%;
     height: inherit;
     background-image: url('@/assets/images/old-books.png');
