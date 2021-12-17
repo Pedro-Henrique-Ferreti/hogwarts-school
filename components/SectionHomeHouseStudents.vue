@@ -45,6 +45,8 @@ export default {
     max-width: unset;
     margin: unset;
     position: absolute;
+    top: 0;
+    bottom: 0;
     right: 0;
   }
   &__card {

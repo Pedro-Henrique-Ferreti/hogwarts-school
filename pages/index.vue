@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 .main {
   padding-top: $header-height__mobile;
-  @media (min-width: $desktop-up) {
+  @media (min-width: $large-tablet-landscape-up) {
     padding-top: $header-height__desktop;
   }
 }

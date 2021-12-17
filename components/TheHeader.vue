@@ -64,7 +64,7 @@ export default {
   left: 0;
   right: 0;
   z-index: 10;
-  @media (min-width: $desktop-up) {
+  @media (min-width: $large-tablet-landscape-up) {
     height: $header-height__desktop;
   }
   &__nav {
@@ -75,7 +75,7 @@ export default {
     height: 100%;
     padding-right: $mobile-padding;
     position: relative;
-    @media (min-width: $desktop-up) {
+    @media (min-width: $large-tablet-landscape-up) {
       padding-right: 90px;
     }
   }
@@ -88,7 +88,7 @@ export default {
     @media (min-width: $large-smartphone-up) {
       padding-left: 136px;
     }
-    @media (min-width: $desktop-up) {
+    @media (min-width: $large-tablet-landscape-up) {
       padding-left: 253px;
     }
   }
@@ -99,7 +99,7 @@ export default {
     }
   }
   &__logo-text-br--desktop {
-    @media (max-width: $desktop-up) {
+    @media (max-width: $large-tablet-landscape-up) {
       display: none;
     }
   }
@@ -117,7 +117,7 @@ export default {
     top: 0;
     left: 0;
     z-index: 9;
-    @media (min-width: $desktop-up) {
+    @media (min-width: $large-tablet-landscape-up) {
       width: 229px;
       height: 110px;
       font-size: 26px;

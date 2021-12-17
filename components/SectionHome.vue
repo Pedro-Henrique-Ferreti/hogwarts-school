@@ -30,18 +30,23 @@ export default {
 .home {
   padding: 100px 0px 64px 0px;
   background-color: $blue-1;
-  background-image: url('@/assets/images/home-background@medium.png');
-  background-position: center;
+  background-image: url('@/assets/images/home-background@1920_1280.png');
+  background-position: center 15%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   @media (min-width: $large-tablet-landscape-up) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    height: 750px;
+    min-height: 500px;
+    height: calc(100vh - $header-height__desktop);
     padding: 0;
     position: relative;
+  }
+  @media (min-width: $desktop-up) {
+    background-image: url('@/assets/images/home-background@2400_1600.png');
   }
   &__card-wrapper {
     display: flex;
