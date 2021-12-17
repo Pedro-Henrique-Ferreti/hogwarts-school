@@ -27,6 +27,7 @@ $large-tablet-portrait-up: 768px;
 $tablet-landscape-up: 900px;
 $large-tablet-landscape-up: 992px;
 $desktop-up: 1200px;
+$large-desktop-up: 1800px;
 
 // Spacing
 $mobile-padding: 16px;
@@ -40,8 +41,9 @@ $header-height__mobile: 64px;
 $header-height__desktop: 90px;
 
 // Cards
-$card-height__mobile: 300px;
-$card-height__tablet: 375px;
+$card-height__small: 300px;
+$card-height__large: 375px;
+$card-height__extra-large: 450px;
 
 // Section
-$section-height__desktop: calc($card-height__tablet * 2);
+$section-height__desktop: calc($card-height__large * 2);
