@@ -45,7 +45,6 @@ export default {
     @media (min-width: $desktop-up) {
       display: grid;
       grid-template-columns: 60% 40%;
-      height: $section-height__desktop;
     }
   }
   &__column-left {
@@ -55,9 +54,6 @@ export default {
       .about__card-animals {
         grid-column: 1 / 3;
       }
-    }
-    @media (min-width: $desktop-up) {
-      grid-template-rows: 375px 375px;
     }
   }
   &__column-right {

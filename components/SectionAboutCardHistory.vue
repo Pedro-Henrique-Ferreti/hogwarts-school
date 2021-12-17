@@ -19,8 +19,6 @@ export default {
 <style lang="scss" scoped>
 .card-history {
   @include card-height;
-  background-color: $green-1;
-  // height: $card-height__mobile;
   position: relative;
   overflow: hidden;
   &:hover {
