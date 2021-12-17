@@ -38,3 +38,10 @@ $box-shadow__header: rgba(100, 100, 111, 0.2) 0px 7px 29px -15px;
 // Header
 $header-height__mobile: 64px;
 $header-height__desktop: 90px;
+
+// Cards
+$card-height__mobile: 300px;
+$card-height__tablet: 375px;
+
+// Section
+$section-height__desktop: calc($card-height__tablet * 2);
