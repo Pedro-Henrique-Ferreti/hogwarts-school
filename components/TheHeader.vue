@@ -59,6 +59,7 @@ export default {
   width: 100%;
   height: $header-height__mobile;
   background-color: $white;
+  box-shadow: $box-shadow__header;
   position: fixed;
   top: 0;
   left: 0;
@@ -126,7 +127,7 @@ export default {
   &__menu {
     width: 100%;
     background-color: $white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px -15px;
+    box-shadow: $box-shadow__header;
     padding: 24px;
     position: fixed;
     top: -50%;
