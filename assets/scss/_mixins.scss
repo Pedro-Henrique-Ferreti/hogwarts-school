@@ -1,6 +1,9 @@
 @mixin card-height {
-  height: $card-height__mobile;
+  height: $card-height__small;
   @media (min-width: $tablet-portrait-up) {
-    height: $card-height__tablet;
+    height: $card-height__large;
+  }
+  @media (min-width: $large-desktop-up) {
+    height: $card-height__extra-large;
   }
 }
