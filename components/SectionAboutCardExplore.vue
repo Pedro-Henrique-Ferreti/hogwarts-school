@@ -64,6 +64,7 @@ export default {
     background-color: $golden-1;
     position: absolute;
     top: 0;
+    z-index: 1;
     @media (min-width: $desktop-up) {
       height: auto;
       bottom: -50px;
