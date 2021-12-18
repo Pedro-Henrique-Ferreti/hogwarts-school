@@ -37,9 +37,9 @@ export default {
     bottom: 0;
     right: 0;
     left: 0;
-    padding: $mobile-padding;
+    padding: $spacing__mobile;
     @media (min-width: $large-tablet-portrait-up) {
-      padding: $desktop-padding;
+      padding: $spacing__desktop;
     }
   }
   &__title {

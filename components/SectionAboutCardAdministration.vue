@@ -31,10 +31,10 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: $mobile-padding;
+  padding: $spacing__mobile;
   background-color: $white;
   @media (min-width: $large-tablet-portrait-up) {
-    padding: $desktop-padding;
+    padding: $spacing__desktop;
   }
   &__title {
     font-weight: $font-medium;

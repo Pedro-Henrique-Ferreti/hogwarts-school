@@ -29,7 +29,7 @@ export default {
 .banner {
   width: 100%;
   max-width: 675px;
-  padding: 36px $mobile-padding 52px $mobile-padding;
+  padding: 36px $spacing__mobile 52px $spacing__mobile;
   background-color: $white;
   position: relative;
   @media (min-width: $large-tablet-portrait-up) {
@@ -37,7 +37,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     height: 200px;
-    padding: 0 $desktop-padding;
+    padding: 0 $spacing__desktop;
   }
   &__icon {
     display: flex;

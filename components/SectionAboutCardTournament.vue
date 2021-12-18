@@ -32,10 +32,10 @@ export default {
 <style lang="scss" scoped>
 .card-tournament {
   width: 100%;
-  padding: $mobile-padding;
+  padding: $spacing__mobile;
   background-color: $gray-2;
   @media (min-width: $large-tablet-portrait-up) {
-    padding: 24px $desktop-padding;
+    padding: 24px $spacing__desktop;
   }
   @media (min-width: $desktop-up) {
     display: flex;

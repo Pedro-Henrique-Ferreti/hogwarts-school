@@ -74,7 +74,7 @@ export default {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-right: $mobile-padding;
+    padding-right: $spacing__mobile;
     position: relative;
     @media (min-width: $large-tablet-landscape-up) {
       padding-right: 90px;
