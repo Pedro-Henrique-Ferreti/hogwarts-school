@@ -4,6 +4,7 @@
     <main class="main">
       <SectionHome />
       <SectionAbout />
+      <SectionHouses />
     </main>
   </div>
 </template>
@@ -12,6 +13,7 @@
 import TheHeader from '@/components/TheHeader.vue';
 import SectionHome from '@/components/SectionHome.vue';
 import SectionAbout from '@/components/SectionAbout.vue';
+import SectionHouses from '@/components/SectionHouses.vue';
 
 export default {
   name: 'IndexPage',
@@ -19,6 +21,7 @@ export default {
     TheHeader,
     SectionHome,
     SectionAbout,
+    SectionHouses,
   },
 };
 </script>
