@@ -11,10 +11,10 @@
     </div>
     <div class="houses__bottom-row">
       <CardInformation class="houses__card-information" />
-      <CardHouseLink />
-      <CardHouseLink />
-      <CardHouseLink />
-      <CardHouseLink />
+      <CardHouseLink color="red">Griffyndor</CardHouseLink>
+      <CardHouseLink color="blue">Ravenclaw</CardHouseLink>
+      <CardHouseLink color="golden">Hufflepuff</CardHouseLink>
+      <CardHouseLink color="green">Slytherin</CardHouseLink>
     </div>
   </section>
 </template>
