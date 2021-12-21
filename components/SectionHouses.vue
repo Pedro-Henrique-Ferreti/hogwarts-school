@@ -4,8 +4,8 @@
     <div class="houses__top-row">
       <CardHouseGhosts />
       <div class="houses__small-cards-wrapper">
-        <CardHouseCup />
         <CardSortingHat />
+        <CardHouseCup class="houses__card-house-cup" />
       </div>
       <CardHouseHeads class="houses__card-house-heads" />
     </div>
@@ -61,8 +61,13 @@ export default {
   }
   &__small-cards-wrapper {
     @media (min-width: $large-tablet-portrait-up) and (max-width: $desktop-up) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       grid-column: 1 / 3;
+    }
+    @media (min-width: $desktop-up) {
+      display: grid;
+      grid-template-rows: 40% 60%;
     }
   }
   &__bottom-row {
@@ -77,6 +82,11 @@ export default {
   &__card-information {
     @media (min-width: $large-tablet-portrait-up) and (max-width: $desktop-up) {
       grid-column: 1 / 5;
+    }
+  }
+  &__card-house-cup {
+    @media (min-width: $desktop-up) {
+      grid-row: 1 / 2;
     }
   }
 }

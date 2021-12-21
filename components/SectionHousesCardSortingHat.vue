@@ -12,6 +12,6 @@ export default {
 .card-sorting-hat {
   background-color: $green-1;
   width: 100%;
-  height: 300px;
+  min-height: 150px;
 }
 </style>
