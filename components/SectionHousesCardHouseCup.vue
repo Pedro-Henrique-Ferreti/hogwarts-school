@@ -41,7 +41,8 @@ export default {
   @media (min-width: $large-tablet-portrait-up) {
     display: flex;
     align-items: center;
-    padding: 0 $spacing__desktop;
+    padding-left: $spacing__desktop;
+    padding-right: $spacing__desktop;
     &__content {
       flex-direction: column;
       align-items: flex-start;
