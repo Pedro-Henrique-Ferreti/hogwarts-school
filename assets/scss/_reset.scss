@@ -15,11 +15,11 @@
 }
 
 html {
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     background-color: #707374;
     width: 12px;
   }
-  ::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background-color: $blue-1;
     border-radius: 15px;
     &:hover {
