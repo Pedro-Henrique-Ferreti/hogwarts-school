@@ -1,5 +1,5 @@
 <template>
-  <section class="app-section home" id="home">
+  <section class="home" id="home">
     <Banner />
     <div class="home__card-wrapper">
       <CardQuidditch />

@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header id="header" class="header">
     <nav class="header__nav">
       <div class="header__logo-wrapper">
         <a href="#home" class="header__logo">Hogwarts</a>
@@ -11,16 +11,27 @@
       </div>
       <div class="header__menu" :class="{ 'header__menu--open': menuIsOpen }">
         <ul class="header__list">
-          <li class="header__item">
-            <a href="#home" class="header__link header__link--active">Home</a>
+          <li class="header__item" @click="menuIsOpen = false">
+            <a class="header__link"
+              href="#home"
+              :class="{ 'header__link--active': activeSectionId === 'home' }"
+            >Home</a>
           </li>
-          <li class="header__item">
-            <a href="#about" class="header__link">About</a>
+          <li class="header__item" @click="menuIsOpen = false">
+            <a class="header__link"
+              href="#about"
+              :class="{ 'header__link--active': activeSectionId === 'about' }"
+            >About</a>
           </li>
-          <li class="header__item">
-            <a href="#houses" class="header__link">Houses</a>
+          <li class="header__item" @click="menuIsOpen = false">
+            <a class="header__link"
+              href="#houses"
+              :class="{ 'header__link--active': activeSectionId === 'houses' }"
+            >Houses</a>
           </li>
-          <li class="header__item header__item--spacing">
+          <li class="header__item header__item--spacing"
+            @click="menuIsOpen = false"
+          >
             <a href="#" class="header__link">
               <IconMagicWand />
             </a>
@@ -49,7 +60,27 @@ export default {
   data() {
     return {
       menuIsOpen: false,
+      activeSectionId: 'home',
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.setActiveLink);
+  },
+  methods: {
+    setActiveLink() {
+      const sections = document.querySelectorAll('section[id]');
+      const headerHeight = document.querySelector('header#header').offsetHeight;
+      const scrollY = window.scrollY;
+
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const distanceFromTop = section.offsetTop - headerHeight;
+
+        if (scrollY > distanceFromTop && scrollY <= distanceFromTop + sectionHeight) {
+          this.activeSectionId = section.getAttribute('id');
+        }
+      });
+    },
   },
 };
 </script>
