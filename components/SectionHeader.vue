@@ -26,7 +26,7 @@ export default {
   align-items: center;
   width: 100%;
   background-color: $blue-1;
-  padding: 8px 0;
+  padding: 16px 0;
   &__subtitle {
     display: flex;
     justify-content: space-between;
