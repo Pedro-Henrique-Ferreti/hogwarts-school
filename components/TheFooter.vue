@@ -2,7 +2,8 @@
   <footer class="footer">
     <a class="footer__logo" href="#">Hogwarts</a>
     <p class="footer__copyright">
-      Pedro Ferreti © 2021. Original design inspired by <a href="#">Frederica Corneli</a>.
+      © 2021 <a class="footer__link" href="https://github.com/Pedro-Henrique-Ferreti" target="_blank">Pedro Ferreti</a>.
+      Original design inspired by <a class="footer__link" href="https://www.behance.net/gallery/62432591/Hogwarts-School-Web-App-concept?tracking_source=search_projects_recommended%7Ccollege" target="_blank">Frederica Corneli</a>.
     </p>
   </footer>
 </template>
@@ -28,6 +29,11 @@ export default {
   }
   &__copyright {
     text-align: center;
+  }
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
   }
   @media (min-width: $large-tablet-portrait-up) {
     flex-direction: row;
