@@ -6,14 +6,19 @@
         Transport <br />
         <span>informations</span>
       </h3>
-      <a class="card-transport__button" href="#">Tickets & Subscriptions</a>
+      <CallToAction class="card-transport__button">Tickets & Subscriptions</CallToAction>
     </div>
   </div>
 </template>
 
 <script>
+import CallToAction from '@/components/CallToAction.vue';
+
 export default {
   name: 'SectionAboutCardTransport',
+  components: {
+    CallToAction,
+  },
 };
 </script>
 
@@ -52,13 +57,7 @@ export default {
     }
   }
   &__button {
-    display: inline-flex;
-    align-items: center;
     height: 44px;
-    color: $white;
-    background-color: $red-1;
-    padding: 0 24px;
-    text-transform: uppercase;
     position: absolute;
     bottom: 0;
     left: 0;
