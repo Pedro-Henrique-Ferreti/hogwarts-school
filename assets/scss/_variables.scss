@@ -36,6 +36,12 @@ $spacing__desktop: 36px;
 // Box shadow
 $box-shadow__header: rgba(100, 100, 111, 0.2) 0px 7px 29px -15px;
 
+// Animation duration
+$animation-duration__fastest: 0.2s;
+$animation-duration__fast: 0.3s;
+$animation-duration__slow: 0.4s;
+$animation-duration__slowest: 0.5s;
+
 // Header
 $header-height__mobile: 64px;
 $header-height__desktop: 90px;

@@ -165,7 +165,7 @@ export default {
     left: 0;
     right: 0;
     z-index: 8;
-    transition: top .4s ease-in-out;
+    transition: top $animation-duration__slow ease-in-out;
     &--open {
       top: $header-height__mobile;
     }
