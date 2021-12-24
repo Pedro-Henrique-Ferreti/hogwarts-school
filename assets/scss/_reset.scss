@@ -17,13 +17,13 @@
 html {
   &::-webkit-scrollbar {
     background-color: #707374;
-    width: 12px;
+    width: 6px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $blue-1;
+    background-color: $red-1;
     border-radius: 15px;
     &:hover {
-      background-color: darken($blue-1, 10);
+      background-color: darken($red-1, 10);
     }
   }
 }
@@ -31,6 +31,7 @@ html {
 body, #__nuxt, #__layout, #app {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
