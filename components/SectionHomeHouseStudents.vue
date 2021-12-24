@@ -20,8 +20,21 @@
 </template>
 
 <script>
+import { SCROLL_REVEAL_CONFIG } from '@/data/constants.js';
+
 export default {
   name: 'SectionHomeHouseStudents',
+  mounted() {
+    const scrollReveal = ScrollReveal({
+      ...SCROLL_REVEAL_CONFIG,
+      origin: 'right',
+    });
+
+    scrollReveal.reveal('.house-students__card--red');
+    scrollReveal.reveal('.house-students__card--blue', { delay: 400 });
+    scrollReveal.reveal('.house-students__card--yellow', { delay: 500 });
+    scrollReveal.reveal('.house-students__card--green', { delay: 600 });
+  },
 };
 </script>
 
