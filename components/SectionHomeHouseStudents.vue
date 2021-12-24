@@ -1,18 +1,18 @@
 <template>
   <div class="house-students">
-    <div class="house-students__card house-students__card--red">
+    <div class="house-students__card house-students__card--red sr-load-hidden">
       <span class="house-students__quantity">12.875</span>
       <h3 class="house-students__house-name">Griffyndor</h3>
     </div>
-    <div class="house-students__card house-students__card--blue">
+    <div class="house-students__card house-students__card--blue sr-load-hidden">
       <span class="house-students__quantity">9.334</span>
       <h3 class="house-students__house-name">Ravenclaw</h3>
     </div>
-    <div class="house-students__card house-students__card--yellow">
+    <div class="house-students__card house-students__card--yellow sr-load-hidden">
       <span class="house-students__quantity">6.982</span>
       <h3 class="house-students__house-name">Hufflepuff</h3>
     </div>
-    <div class="house-students__card house-students__card--green">
+    <div class="house-students__card house-students__card--green sr-load-hidden">
       <span class="house-students__quantity">4.776</span>
       <h3 class="house-students__house-name">Slytherin</h3>
     </div>
@@ -20,20 +20,15 @@
 </template>
 
 <script>
-import { SCROLL_REVEAL_CONFIG } from '@/data/constants.js';
+import scrollReveal from '@/plugins/scrollReveal.js';
 
 export default {
   name: 'SectionHomeHouseStudents',
   mounted() {
-    const scrollReveal = ScrollReveal({
-      ...SCROLL_REVEAL_CONFIG,
-      origin: 'right',
-    });
-
-    scrollReveal.reveal('.house-students__card--red');
-    scrollReveal.reveal('.house-students__card--blue', { delay: 400 });
-    scrollReveal.reveal('.house-students__card--yellow', { delay: 500 });
-    scrollReveal.reveal('.house-students__card--green', { delay: 600 });
+    scrollReveal('.house-students__card--red', { origin: 'right' });
+    scrollReveal('.house-students__card--blue', { origin: 'right', delay: 400 });
+    scrollReveal('.house-students__card--yellow', { origin: 'right', delay: 500 });
+    scrollReveal('.house-students__card--green', { origin: 'right', delay: 600 });
   },
 };
 </script>

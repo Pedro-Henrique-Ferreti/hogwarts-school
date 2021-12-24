@@ -1,13 +1,15 @@
 <template>
   <header class="section-header">
-    <h3 class="section-header__subtitle">{{ subtitle }}</h3>
-    <h2 class="section-header__title">
+    <h3 class="section-header__subtitle sr-load-hidden">{{ subtitle }}</h3>
+    <h2 class="section-header__title sr-load-hidden">
       <slot />
     </h2>
   </header>
 </template>
 
 <script>
+import scrollReveal from '@/plugins/scrollReveal.js';
+
 export default {
   name: 'SectionHeader',
   props: {
@@ -15,6 +17,10 @@ export default {
       type: String,
       required: true,
     },
+  },
+  mounted() {
+    scrollReveal('.section-header__subtitle', { origin: 'right' });
+    scrollReveal('.section-header__title', { origin: 'left' });
   },
 };
 </script>
@@ -27,6 +33,7 @@ export default {
   width: 100%;
   background-color: $blue-1;
   padding: 16px 0;
+  overflow: hidden;
   &__subtitle {
     display: flex;
     justify-content: space-between;
