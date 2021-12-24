@@ -1,6 +1,6 @@
 <template>
   <section class="about" id="about">
-    <SectionHeader subtitle="Know More">Meet The Houses</SectionHeader>
+    <SectionHeader subtitle="About">Explore Hogwarts</SectionHeader>
     <div class="about__content">
       <div class="about__column-left">
         <CardHistory />
