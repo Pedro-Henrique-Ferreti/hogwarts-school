@@ -1,19 +1,19 @@
 <template>
   <div class="house-students">
     <div class="house-students__card house-students__card--red sr-load-hidden">
-      <span class="house-students__quantity">12.875</span>
+      <span class="house-students__quantity" ref="quantityGryffindor">12,875</span>
       <h3 class="house-students__house-name">Griffyndor</h3>
     </div>
     <div class="house-students__card house-students__card--blue sr-load-hidden">
-      <span class="house-students__quantity">9.334</span>
+      <span class="house-students__quantity" ref="quantityRavenclaw">9,334</span>
       <h3 class="house-students__house-name">Ravenclaw</h3>
     </div>
     <div class="house-students__card house-students__card--yellow sr-load-hidden">
-      <span class="house-students__quantity">6.982</span>
+      <span class="house-students__quantity" ref="quantityHufflepuff">6,982</span>
       <h3 class="house-students__house-name">Hufflepuff</h3>
     </div>
     <div class="house-students__card house-students__card--green sr-load-hidden">
-      <span class="house-students__quantity">4.776</span>
+      <span class="house-students__quantity" ref="quantitySlytherin">4,776</span>
       <h3 class="house-students__house-name">Slytherin</h3>
     </div>
   </div>
@@ -21,6 +21,7 @@
 
 <script>
 import scrollReveal from '@/plugins/scrollReveal.js';
+import { CountUp } from 'countup.js';
 
 export default {
   name: 'SectionHomeHouseStudents',
@@ -29,6 +30,18 @@ export default {
     scrollReveal('.house-students__card--blue', { origin: 'right', delay: 400 });
     scrollReveal('.house-students__card--yellow', { origin: 'right', delay: 500 });
     scrollReveal('.house-students__card--green', { origin: 'right', delay: 600 });
+
+    this.startCountUp(this.$refs.quantityGryffindor, 12875);
+    this.startCountUp(this.$refs.quantityRavenclaw, 9334);
+    this.startCountUp(this.$refs.quantityHufflepuff, 6982);
+    this.startCountUp(this.$refs.quantitySlytherin, 4776);
+  },
+  methods: {
+    startCountUp(element, number) {
+      new CountUp(element, number, {
+        duration: 3.5,
+      }).start();
+    },
   },
 };
 </script>
