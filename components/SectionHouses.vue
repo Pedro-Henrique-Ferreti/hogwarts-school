@@ -11,10 +11,10 @@
     </div>
     <div class="houses__bottom-row">
       <CardInformation class="houses__card-information" />
-      <CardHouseLink color="red">Griffyndor</CardHouseLink>
-      <CardHouseLink color="blue">Ravenclaw</CardHouseLink>
-      <CardHouseLink color="golden">Hufflepuff</CardHouseLink>
-      <CardHouseLink color="green">Slytherin</CardHouseLink>
+      <CardHouseLink class="houses__card-griffyndor" color="red">Griffyndor</CardHouseLink>
+      <CardHouseLink class="houses__card-ravenclaw" color="blue">Ravenclaw</CardHouseLink>
+      <CardHouseLink class="houses__card-hufflepuff" color="golden">Hufflepuff</CardHouseLink>
+      <CardHouseLink class="houses__card-slytherin" color="green">Slytherin</CardHouseLink>
     </div>
   </section>
 </template>
@@ -28,6 +28,8 @@ import CardHouseHeads from '@/components/SectionHousesCardHouseHeads.vue';
 import CardHouseLink from '@/components/SectionHousesCardHouseLink.vue';
 import CardInformation from '@/components/SectionHousesCardInformation.vue';
 
+import scrollReveal from '@/plugins/scrollReveal.js';
+
 export default {
   name: 'SectionHouses',
   components: {
@@ -38,6 +40,23 @@ export default {
     CardHouseHeads,
     CardHouseLink,
     CardInformation,
+  },
+  mounted() {
+    scrollReveal('.houses__card-griffyndor', {
+      origin: 'left',
+    });
+    scrollReveal('.houses__card-ravenclaw', {
+      origin: 'left',
+      delay: 350,
+    });
+    scrollReveal('.houses__card-hufflepuff', {
+      origin: 'left',
+      delay: 550,
+    });
+    scrollReveal('.houses__card-slytherin', {
+      origin: 'left',
+      delay: 750,
+    });
   },
 };
 </script>
