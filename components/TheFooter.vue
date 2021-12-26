@@ -21,6 +21,7 @@ export default {
   align-items: center;
   padding: $spacing__mobile;
   gap: 16px;
+  background-color: $white;
   &__logo {
     color: $red-1;
     font-size: 20px;

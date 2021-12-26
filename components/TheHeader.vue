@@ -87,10 +87,13 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  @include container;
   width: 100%;
+  max-width: $max-device-size;
   height: $header-height__mobile;
   background-color: $white;
   box-shadow: $box-shadow__header;
+  margin: auto;
   position: fixed;
   top: 0;
   left: 0;

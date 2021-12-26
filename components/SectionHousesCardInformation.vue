@@ -28,6 +28,7 @@ export default {
   max-width: 500px;
   padding: $spacing__mobile;
   margin: auto;
+  background-color: $white;
   overflow: auto;
   @media (min-width: $large-tablet-landscape-up) {
     padding-left: $spacing__desktop;
