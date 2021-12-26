@@ -1,5 +1,5 @@
 <template>
-  <a href="#" class="call-to-action" :class="callToActionClasses">
+  <a href="#" class="call-to-action sr-load-hidden" :class="callToActionClasses">
     <span class="call-to-action__content">
       <slot name="icon" />
       <slot />
@@ -10,6 +10,7 @@
 
 <script>
 import IconArrow from '@/assets/images/icons/Arrow.vue';
+import scrollReveal from '@/plugins/scrollReveal.js';
 
 const VALID_COLORS = ['red', 'black'];
 
@@ -34,6 +35,11 @@ export default {
         'call-to-action--black': this.color === VALID_COLORS[1],
       };
     },
+  },
+  mounted() {
+    scrollReveal('.call-to-action', {
+      origin: 'left',
+    });
   },
 };
 </script>
