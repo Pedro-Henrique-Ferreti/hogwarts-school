@@ -203,6 +203,7 @@ export default {
     font-size: 18px;
     font-weight: $font-medium;
     text-transform: uppercase;
+    transition: color $animation-duration__fastest ease-in-out;
     ::v-deep svg {
       width: 32px;
       height: 32px;
@@ -219,6 +220,7 @@ export default {
         position: absolute;
         bottom: 0;
         left: -20px;
+        animation: line $animation-duration__fastest ease-in-out;
       }
     }
   }
@@ -235,6 +237,13 @@ export default {
     @media (min-width: $large-tablet-portrait-up) {
       display: none;
     }
+  }
+}
+
+@keyframes line {
+  from {
+    left: -50px;
+    width: 0;
   }
 }
 </style>
