@@ -24,7 +24,7 @@ export default {
   &__background-image {
     width: 100%;
     height: inherit;
-    background-image: url('@/assets/images/castle-inside.png');
+    background-image: url('@/assets/images/castle-inside.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

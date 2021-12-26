@@ -31,7 +31,7 @@ export default {
   &__background-image {
     width: 100%;
     height: inherit;
-    background-image: url('@/assets/images/hogwarts-train.png');
+    background-image: url('@/assets/images/hogwarts-train.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

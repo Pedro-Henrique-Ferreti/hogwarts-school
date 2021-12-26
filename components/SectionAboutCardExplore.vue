@@ -49,7 +49,7 @@ export default {
   &__background-image {
     width: 75%;
     height: inherit;
-    background-image: url('@/assets/images/old-books.png');
+    background-image: url('@/assets/images/old-books.webp');
     background-size: cover;
     margin-left: auto;
   }

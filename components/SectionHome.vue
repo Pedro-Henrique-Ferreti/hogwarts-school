@@ -30,7 +30,7 @@ export default {
 .home {
   padding: 100px 0px 64px 0px;
   background-color: $blue-1;
-  background-image: url('@/assets/images/home-background@1920_1280.png');
+  background-image: url('@/assets/images/home-background_1920_1280.webp');
   background-position: center 15%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@ export default {
     position: relative;
   }
   @media (min-width: $desktop-up) {
-    background-image: url('@/assets/images/home-background@2400_1600.png');
+    background-image: url('@/assets/images/home-background_2400_1600.webp');
   }
   &__card-wrapper {
     display: flex;

@@ -24,7 +24,7 @@ export default {
   position: relative;
   &__background-image {
     height: inherit;
-    background-image: url('@/assets/images/animal-owl.png');
+    background-image: url('@/assets/images/animal-owl.webp');
     background-size: cover;
     background-position: center;
   }
