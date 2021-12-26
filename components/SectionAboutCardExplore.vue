@@ -11,7 +11,7 @@
         <li class="card-explore__item">
           <a class="card-explore__link" href="#">Magic</a>
         </li>
-        <li class="card-explore__item card-explore__item--active">
+        <li class="card-explore__item">
           <a class="card-explore__link" href="#">Library</a>
         </li>
         <li class="card-explore__item">
@@ -83,7 +83,8 @@ export default {
   }
   &__item {
     width: 115%;
-    &--active {
+    &:hover {
+      animation: explore $animation-duration__fast ease-in-out;
       background-color: $red-1;
     }
   }
@@ -96,6 +97,11 @@ export default {
     @media (max-width: $large-smartphone-up) {
       font-size: 14px;
     }
+  }
+}
+@keyframes explore {
+  from {
+    width: 100%;
   }
 }
 </style>
