@@ -1,5 +1,5 @@
 <template>
-  <a class="card-quidditch" href="#">
+  <a class="card-quidditch sr-load-hidden" href="#">
     <IconQuidditch class="card-quidditch__icon" />
     <h2 class="card-quidditch__text">Quidditch Life</h2>
   </a>
@@ -7,11 +7,17 @@
 
 <script>
 import IconQuidditch from '@/assets/images/icons/Quidditch.vue';
+import scrollReveal from '@/plugins/scrollReveal.js';
 
 export default {
   name: 'SectionHomeCardQuidditch',
   components: {
     IconQuidditch,
+  },
+  mounted() {
+    scrollReveal('.card-quidditch', {
+      origin: 'bottom',
+    });
   },
 };
 </script>

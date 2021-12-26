@@ -29,7 +29,6 @@ export default {
 <style lang="scss" scoped>
 .home {
   padding: 100px 0px 64px 0px;
-  background-color: $blue-1;
   background-image: url('@/assets/images/home-background_1920_1280.webp');
   background-position: center 15%;
   background-size: cover;

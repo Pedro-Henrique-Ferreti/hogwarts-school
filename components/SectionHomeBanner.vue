@@ -1,5 +1,5 @@
 <template>
-  <div class="banner">
+  <div class="banner sr-load-hidden">
     <div class="banner__icon">
       <IconGraduation />
     </div>
@@ -15,12 +15,18 @@
 <script>
 import IconGraduation from '@/assets/images/icons/Graduation.vue';
 import CallToAction from '@/components/CallToAction.vue';
+import scrollReveal from '@/plugins/scrollReveal.js';
 
 export default {
   name: 'SectionHomeBanner',
   components: {
     IconGraduation,
     CallToAction,
+  },
+  mounted() {
+    scrollReveal('.banner', {
+      origin: 'left',
+    });
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <a class="card-hogsmeade" href="#">
+  <a class="card-hogsmeade sr-load-hidden" href="#">
     <h2 class="card-hogsmeade__title">Hogsmeade Spring Break</h2>
     <p class="card-hogsmeade__text">Enrollment ends in two weeks</p>
     <span class="card-hogsmeade__button">Sign Up</span>
@@ -7,8 +7,15 @@
 </template>
 
 <script>
+import scrollReveal from '@/plugins/scrollReveal.js';
+
 export default {
   name: 'SectionHomeCardHogsmeade',
+  mounted() {
+    scrollReveal('.card-hogsmeade', {
+      origin: 'bottom',
+    });
+  },
 };
 </script>
 
