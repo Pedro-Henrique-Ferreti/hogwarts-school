@@ -40,6 +40,9 @@ export default {
   &::-webkit-scrollbar-thumb {
     background-color: $red-1;
     border-radius: 15px;
+    &:hover {
+      background-color: darken($red-1, 10);
+    }
   }
 }
 </style>
