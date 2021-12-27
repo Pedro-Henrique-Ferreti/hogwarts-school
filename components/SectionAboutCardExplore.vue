@@ -8,7 +8,7 @@
         <li class="card-explore__item"
           v-for="item in menuItems" :key="item.id"
           :class="{ 'card-explore__item--active': activeItemId === item.id }"
-          @mouseenter="activeItemId = item.id"
+          @mouseenter="toggleActiveItem(item.id)"
         >
           <a class="card-explore__link" href="#">{{ item.name }}</a>
         </li>
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import _debounce from 'lodash/debounce';
+
 const MENU_ITEMS = [
   { id: 0, name: 'Classrooms' },
   { id: 1, name: 'Magic' },
@@ -53,6 +55,11 @@ export default {
     activeItemId() {
       this.key++;
     },
+  },
+  methods: {
+    toggleActiveItem: _debounce(function(id) {
+      this.activeItemId = id;
+    }, 200),
   },
 };
 </script>
