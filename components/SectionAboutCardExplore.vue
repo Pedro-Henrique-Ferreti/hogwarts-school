@@ -88,7 +88,7 @@ export default {
     }
     &--magic {
       animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/magic-wand-and-book.jpg');
+      background-image: url('@/assets/images/magic-wand-and-book.webp');
       background-position: initial;
     }
     &--library {
@@ -97,15 +97,15 @@ export default {
     }
     &--towers {
       animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/dinning-area.jpg');
+      background-image: url('@/assets/images/dinning-area.webp');
     }
     &--dorms {
       animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/school-directors.jpg');
+      background-image: url('@/assets/images/school-directors.webp');
     }
     &--passages {
       animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/metal-castle-door.jpg');
+      background-image: url('@/assets/images/metal-castle-door.webp');
       background-position: initial;
     }
   }
