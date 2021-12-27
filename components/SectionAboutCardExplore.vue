@@ -1,7 +1,7 @@
 <template>
   <div class="card-explore">
     <div class="card-explore__background-wrapper">
-      <div class="card-explore__background-image" :class="backgroundClasses" />
+      <div class="card-explore__background-image" :class="backgroundClasses" :key="key" />
     </div>
     <nav class="card-explore__nav">
       <ul class="card-explore__list">
@@ -32,6 +32,7 @@ export default {
   name: 'SectionAboutCardExplore',
   data() {
     return {
+      key: 0,
       menuItems: MENU_ITEMS,
       activeItemId: 0,
     };
@@ -48,16 +49,21 @@ export default {
       };
     },
   },
+  watch: {
+    activeItemId() {
+      this.key++;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .card-explore {
   @include card-height;
-  @include scale-card-background-image;
   width: 100%;
   position: relative;
   overflow: unset;
+  background-color: $gray-2;
   &__background-wrapper {
     overflow: hidden;
     height: inherit;
