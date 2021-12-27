@@ -63,21 +63,20 @@ export default {
     height: inherit;
   }
   &__background-image {
-    width: 75%;
+    width: 68%;
     height: inherit;
     background-size: cover;
     margin-left: auto;
+    background-position: center;
     &--classrooms {
       animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/apple-on-books-pile.jpg');
+      background-image: url('@/assets/images/paint-and-quill-on-desk.jpg');
+      background-position: initial;
     }
     &--magic {
       animation: card-background $animation-duration__slow ease-in-out;
       background-image: url('@/assets/images/magic-wand-and-book.jpg');
-    }
-    &--library {
-      animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/old-books.webp');
+      background-position: initial;
     }
     &--library {
       animation: card-background $animation-duration__slow ease-in-out;
@@ -85,15 +84,16 @@ export default {
     }
     &--towers {
       animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/old-books.webp');
+      background-image: url('@/assets/images/dinning-area.jpg');
     }
     &--dorms {
       animation: card-background $animation-duration__slow ease-in-out;
-      background-image: url('@/assets/images/old-books.webp');
+      background-image: url('@/assets/images/school-directors.jpg');
     }
     &--passages {
       animation: card-background $animation-duration__slow ease-in-out;
       background-image: url('@/assets/images/metal-castle-door.jpg');
+      background-position: initial;
     }
   }
   &__nav {
