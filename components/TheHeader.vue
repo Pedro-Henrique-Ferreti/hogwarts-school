@@ -32,13 +32,16 @@
           <li class="header__item header__item--spacing"
             @click="menuIsOpen = false"
           >
-            <a href="#" class="header__link">
+            <a class="header__link" href="#" aria-label="Magic wand" >
               <IconMagicWand />
             </a>
           </li>
         </ul>
       </div>
-      <button class="header__menu-button" @click="menuIsOpen = !menuIsOpen">
+      <button class="header__menu-button"
+        :aria-label="menuIsOpen ? 'Close menu' : 'Open menu'"
+        @click="menuIsOpen = !menuIsOpen"
+      >
         <component :is="menuIsOpen ? 'IconClose' : 'IconMenu'" />
       </button>
     </nav>
