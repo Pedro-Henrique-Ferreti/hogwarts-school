@@ -15,7 +15,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Learn about the Houses, animals and beasts, quidditch tournaments and more! Get ready for the next exams and prepare for your courses!',
+      },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileColor', content: '#ffffff'},
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
